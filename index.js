@@ -9,17 +9,17 @@ exports.reply = function justReply(req, res) {
 
         var target_albumId = "";
 
-        if( msg.includes( _KEYWORD1_ ) ){
-            target_albumId = _IMGUR_ALBUM_ID_FOR_KEYWORD1_ ;
+        if( msg.includes( "f") ){
+            target_albumId = "6FdES" ;
         }else{
             return;
         }
 
         var imgur_options = {
             method: 'GET',
-            uri: `https://api.imgur.com/3/album/${target_albumId}/images`,
+            uri: `https://api.imgur.com/3/album/${"6FdES"}/images`,
             headers: {
-              "Authorization": `Client-ID ${_IMGUR_APP_TOKEN_}`
+              "Authorization": `Client-ID ${"9976db0687776b7"}`
             },
             json: true
         };
@@ -42,7 +42,7 @@ exports.reply = function justReply(req, res) {
                 uri: "https://api.line.me/v2/bot/message/reply",
                 headers: {
                   "Content-type": "application/json; charset=UTF-8",
-                  "Authorization": ` Bearer ${_LINE_CHANNEL_ACCESS_TOKEN_}`
+                  "Authorization": ` Bearer ${"xKAZm8Z0594G9EoDe2bf+XBfAHJSXHFnBIotFWOdhm50uBJIwP001zAiig1JQ4rnlkYklP7TlmWE0IGi6XznobbW+AAXpfT5oKOhliXDJwn8j5i0PPMbsuSwkYo+B86HdiWbFKhrIoh3/0WnFwUqagdB04t89/1O/w1cDnyilFU="}`
                 },
                 json: true,
                 body: {
